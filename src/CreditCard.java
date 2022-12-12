@@ -3,12 +3,18 @@ public class CreditCard
     private String accountHolder;
     private String personalPIN;
     private int balanceOwed;
+    private static int numberOfCards = 0;
 
     public CreditCard(String name, String personalPIN)
     {
         accountHolder = name;
         this.personalPIN = personalPIN;
         balanceOwed = 0;
+        numberOfCards++;
+    }
+
+    public static int getNumberOfCards(){
+        return numberOfCards;
     }
 
     public String getAccountHolder()
